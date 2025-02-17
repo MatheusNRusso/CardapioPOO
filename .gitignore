@@ -1,0 +1,17 @@
+# Ignorar arquivos compilados
+*.class
+
+# Ignorar arquivos temporários
+*.tmp
+*.log
+
+# Ignorar IDE-specific files
+.idea/
+*.iml
+
+# Ignorar pastas de saída de compilação
+/out/
+
+# Ignorar arquivos específicos do sistema operacional
+.DS_Store
+Thumbs.db
