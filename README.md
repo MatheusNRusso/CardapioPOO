@@ -1,150 +1,108 @@
-## CardápioPOO
+# CardápioPOO
 
-        ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) ![POO](https://img.shields.io/badge/POO-Oriented%20to%20Objects-blue)
+        ## Sobre o Projeto
+        O **CardápioPOO** é um sistema em Java desenvolvido como parte da disciplina de **Programação Orientada a Objetos** do curso de **Tecnologia em Sistemas de Computação** na UFF. O sistema permite gerenciar cardápios de diferentes unidades de um restaurante, permitindo a consulta de pratos por categoria e a visualização das categorias disponíveis antes da seleção.
 
-        Este projeto foi desenvolvido como parte da disciplina de **Programação Orientada a Objetos** no curso de **Tecnologia em Sistemas de Computação** da UFF. O objetivo é criar um sistema para gerenciar cardápios de diferentes unidades de um restaurante.
-
-        ---
-
-        ## Índice
-
-        1. [Descrição do Projeto](#descrição-do-projeto)
-        2. [Estrutura do Projeto](#estrutura-do-projeto)
-        3. [Como Executar o Projeto](#como-executar-o-projeto)
-        4. [Formato dos Arquivos de Entrada](#formato-dos-arquivos-de-entrada)
-        5. [Funcionalidades Principais](#funcionalidades-principais)
-        6. [Contribuições](#contribuições)
-        7. [Licença](#licença)
-        8. [Contato](#contato)
-
-        ---
-
-        ## Descrição do Projeto
-
-        Este sistema permite gerenciar cardápios de diferentes unidades de um restaurante. Ele lê arquivos de texto contendo informações sobre os pratos (nome, preço e categoria), exibe os pratos por categoria, calcula totais de preço e quantidade, e interage com o usuário para fornecer detalhes específicos.
-
-        ---
-
-        ## Estrutura do Projeto
-
-        ```
-        .
-        ├── cardapiosFiles       -> Arquivos de entrada com os cardápios
-        │   ├── cardapio1.txt
-        │   ├── cardapio2.txt
-        │   └── cardapio3.txt
-        ├── src                  -> Código-fonte do projeto
-        │   ├── Main.java        -> Classe principal com o método main
-        │   ├── Prato.java       -> Classe para representar um prato
-        │   └── Cardapio.java    -> Classe para representar um cardápio
-        ├── README.md            -> Documentação do projeto
-        └── .gitignore           -> Arquivos a serem ignorados pelo Git
-        ```
-
-        ---
+        ## Funcionalidades
+        - Cadastro de múltiplas unidades do restaurante a partir de arquivos de texto.
+        - Consulta de pratos por categoria, com exibição de quantidade e preço total.
+        - Opção para exibir os detalhes dos pratos.
+        - **Nova funcionalidade:** Visualização das categorias disponíveis antes da seleção.
 
         ## Como Executar o Projeto
 
-        ### Pré-requisitos
-
-        - **Java JDK**: Certifique-se de ter o Java instalado na sua máquina. Você pode baixá-lo [aqui](https://www.oracle.com/java/technologies/javase-downloads.html).
-        - **Git**: Para clonar o repositório, você precisa do Git instalado. Baixe-o [aqui](https://git-scm.com/).
-
-        ### Passos para Executar
-
-        1. **Clone o repositório:**
+        ### 1. Clonar o Repositório
         ```bash
-        git clone https://github.com/seu-usuario/javaPOO_2024.git
+        git clone https://github.com/seu-usuario/CardapioPOO.git
+        cd CardapioPOO
         ```
 
-        2. **Navegue até o diretório do projeto:**
-        ```bash
-        cd javaPOO_2024
-        ```
-
-        3. **Certifique-se de que os arquivos de cardápio estão na pasta `cardapiosFiles`.**
-        - Exemplo de estrutura:
-        ```
-        cardapiosFiles/
-        ├── cardapio1.txt
-        ├── cardapio2.txt
-        └── cardapio3.txt
-        ```
-
-        4. **Compile o projeto:**
+        ### 2. Compilar o Projeto
         ```bash
         javac src/*.java
         ```
 
-        5. **Execute o programa:**
+        ### 3. Executar o Programa
         ```bash
         java src.Main
         ```
 
-        6. **Insira o número de unidades e os nomes dos arquivos de cardápio quando solicitado.**
-        - Os arquivos serão buscados automaticamente na pasta `cardapiosFiles`.
-
-        ---
-
-        ## Formato dos Arquivos de Entrada
-
-        Os arquivos de cardápio devem seguir este formato:
-
+        ## Formato dos Arquivos de Cardápio
+        Cada unidade deve possuir um arquivo de texto com o seguinte formato:
         ```
-        NomeDaCidade
-        Prato1;Preço1;Categoria1
-        Prato2;Preço2;Categoria2
-        Prato3;Preço3;Categoria3
-        ```
+<NOME DA CIDADE>
+    <NOME DO PRATO>;<PREÇO>;<CATEGORIA>
+        <NOME DO PRATO>;<PREÇO>;<CATEGORIA>
+            ...
+            ```
+            **Exemplo (`cardapio1.txt`):**
+            ```
+            Niterói
+            Filé Mignon;59.90;Prato Principal
+            Risoto de Camarão;45.00;Prato Principal
+            Tiramisu;12.00;Sobremesa
+            ```
 
-        ### Exemplo (`cardapio1.txt`):
-        ```
-        Rio de Janeiro
-        Feijoada;25.99;Prato Principal
-        Pudim;8.50;Sobremesa
-        Caipirinha;12.00;Bebida
-        ```
+            ## Exemplo de Execução
+            ```
+            Seja bem-vindo(a)!
+            Quantas unidades serão cadastradas? 3
+            Arquivo da Unidade 1: cardapio1.txt
+            Arquivo da Unidade 2: cardapio2.txt
+            Arquivo da Unidade 3: cardapio3.txt
 
-        ---
+            Menu:
+            1 - Visualizar categorias disponíveis
+            2 - Escolher uma categoria para visualizar pratos
+            0 - Sair
+            Escolha uma opção: 1
+            Categorias disponíveis:
+            - sobremesa
+            - prato principal
+            - prato
+            - entrada
+            - drink
+            - bebida
 
-        ## Funcionalidades Principais
+            Menu:
+            1 - Visualizar categorias disponíveis
+            2 - Escolher uma categoria para visualizar pratos
+            0 - Sair
+            Escolha uma opção: 2
+            Digite a categoria desejada: sobremesa
+            (Unidade Niterói): Quantidade = 1, Preço = R$ 12,00
+            (Unidade São Gonçalo): Quantidade = 1, Preço = R$ 15,00
+            (Unidade Maricá): Quantidade = 1, Preço = R$ 10,00
+            Total: Quantidade = 3, Preço = R$ 37,00
+            Exibir Detalhes ('s' ou 'n')? s
 
-        - **Leitura de Arquivos**: O programa lê arquivos `.txt` contendo informações de cardápios.
-        - **Exibição de Pratos por Categoria**: Exibe os pratos de uma determinada categoria.
-        - **Cálculo de Totais**: Calcula o total de preço e quantidade de pratos por categoria.
-        - **Interação com o Usuário**: Permite ao usuário escolher categorias e exibir detalhes dos pratos.
+            Unidade Niterói
+            Tiramisu -> R$ 12,00
 
-        ---
+            Unidade São Gonçalo
+            Brownie de Chocolate -> R$ 15,00
 
-        ## Contribuições
+            Unidade Maricá
+            Banana Split -> R$ 10,00
 
-        Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga os passos abaixo:
+            Menu:
+            1 - Visualizar categorias disponíveis
+            2 - Escolher uma categoria para visualizar pratos
+            0 - Sair
+            Escolha uma opção: 0
+            Programa encerrado.
+            ```
 
-        1. Faça um fork deste repositório.
-        2. Crie uma nova branch (`git checkout -b feature/nova-funcionalidade`).
-        3. Commit suas mudanças (`git commit -m 'Adicionando nova funcionalidade'`).
-        4. Envie as mudanças para o repositório remoto (`git push origin feature/nova-funcionalidade`).
-        5. Abra um Pull Request.
+            ## Contribuição
+            Para contribuir com melhorias no projeto:
+            1. **Crie um branch**: `git checkout -b minha-feature`
+            2. **Implemente sua mudança** e faça commit: `git commit -m "Descrição da melhoria"`
+            3. **Envie o branch**: `git push origin minha-feature`
+            4. **Abra um Pull Request** no GitHub.
 
-        ---
+            ## Licença
+            Este projeto é de uso acadêmico e pode ser modificado conforme a necessidade. Caso queira utilizar para fins comerciais, consulte o autor.
 
-        ## Licença
-
-        Este projeto está licenciado sob a [MIT License](LICENSE).
-
-        ---
-
-        ## Contato
-
-        Se tiver dúvidas ou sugestões, entre em contato:
-
-        - **Email**: matheusnrs@id.uff.br
-        - **GitHub**: [Seu Perfil no GitHub](https://github.com/seu-usuario)
-
-        ---
-
-        ## Agradecimentos
-
-        - **Universidade Federal Fluminense (UFF)**: Pelo suporte acadêmico.
-        - **Professores e Colegas**: Pelas discussões e aprendizados durante o curso.
+            ---
+            Desenvolvido por **Matheus Nogueira Russo**
 
