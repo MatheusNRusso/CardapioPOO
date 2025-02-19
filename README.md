@@ -1,7 +1,7 @@
 # CardápioPOO
 
 ## Sobre o Projeto
-O **CardápioPOO** é um sistema em Java desenvolvido como parte da disciplina de **Programação Orientada a Objetos** do curso de **Tecnologia em Sistemas de Computação** na UFF. O sistema permite gerenciar cardápios de diferentes unidades de um restaurante, permitindo a consulta de pratos por categoria e a visualização das categorias disponíveis antes da seleção.
+O **CardápioPOO** é um sistema em Java desenvolvido como parte da avaliação do primeiro semestre de 2024 da disciplina de **Programação Orientada a Objetos** do curso de **Tecnologia em Sistemas de Computação** na UFF. O sistema permite gerenciar cardápios de diferentes unidades de um restaurante, permitindo a consulta de pratos por categoria e a visualização das categorias disponíveis antes da seleção.
 
 ## Funcionalidades
 - Cadastro de múltiplas unidades do restaurante a partir de arquivos de texto.
