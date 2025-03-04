@@ -1,0 +1,85 @@
+# Ignorar arquivos do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.db
+*.sqlite3
+
+# Ignorar arquivos de ambiente virtual
+venv/
+env/
+.venv/
+.env/
+
+# Ignorar arquivos de IDE/Editor
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+
+# Ignorar arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de log e temporários
+*.log
+*.tmp
+*.bak
+*.rej
+*.orig
+
+# Ignorar arquivos de dependências
+node_modules/
+vendor/
+bower_components/
+dist/
+build/
+bin/
+*.egg-info/
+*.egg
+*.whl
+
+# Ignorar arquivos de configuração do Git
+.gitattributes
+.gitmodules
+
+# Ignorar arquivos de configuração do Maven/Gradle
+.mvn/
+.gradle/
+*.gradle
+mvnw
+gradlew
+gradlew.bat
+
+# Ignorar arquivos de configuração do npm/yarn
+package-lock.json
+yarn.lock
+
+# Ignorar arquivos de banco de dados
+*.db
+*.sql
+*.dump
+
+# Ignorar arquivos de áudio, vídeo e imagens
+*.wav
+*.mp3
+*.mp4
+*.jpg
+*.png
+*.gif
+
+# Ignorar arquivos de documentação
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Ignorar arquivos de sistema operacional
+*.orig
+*.bak
+*.rej
